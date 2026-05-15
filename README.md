@@ -51,6 +51,69 @@ This system strictly enforces data immutability and machine learning data collec
 
 **Software Dependencies:**
 The system requires Python 3.8+ installation. Install the required libraries via terminal:
+Note for Windows environments: Install the pygrabber module to resolve real camera hardware names:
 
+Bash
+pip install pygrabber
+📥 Installation
+Clone the repository to a local machine:
+
+Bash
+git clone [https://github.com/username/ledger-capture-system.git](https://github.com/username/ledger-capture-system.git)
+cd ledger-capture-system
+Install dependencies as listed in the prerequisites.
+
+🖥️ Usage
+Execute the main application script:
+
+Bash
+python ledger_capture.py
+Operational Workflow:
+
+Directory Configuration: Select the destination folder for raw image storage (defaults to a local raw_ledger_images folder).
+
+Hardware Selection: Choose the active USB camera from the dropdown menu and set the Aspect Factor (Landscape/Portrait).
+
+Data Entry: Input the Ledger Book ID and the starting Page Number.
+
+Capture Process: Click "Start Camera". Align the document in the live feed and press the [SPACEBAR] or click "Capture" to trigger the shutter. The page number increments automatically.
+
+📁 Output Structure
+For every capture event, the system generates two files following the YYYYMMDD_HHMMSS_LedgerBookID_PageNumber schema:  
+
+Raw Image (.png): Saved with zero compression and strict 300x300 DPI header metadata.
+
+Metadata Record (.json):
+
+JSON
+{
+    "timestamp": "20260515_222500",
+    "ledger_book_id": "DAIRY_MAY_2026",
+    "page_number": 1,
+    "file_format": "PNG",
+    "resolution": "4000x3000",
+    "dpi": 300,
+    "color_space": "RGB",
+    "orientation": "Portrait",
+    "camera_name": "Logitech BRIO (Port 1)",
+    "environmental_conditions": "Controlled Copy Stand",
+    "lighting_parameters": "Constant LED Ring Light",
+    "digital_zoom": "Disabled"
+}
+📦 Building a Standalone Executable (Windows)
+PyInstaller packages the application into a standalone .exe for deployment on operator machines without requiring a Python installation.
+
+Install PyInstaller:
+
+Bash
+pip install pyinstaller
+Build the application:
+
+Bash
+pyinstaller --noconsole --onefile ledger_capture.py
+Locate the compiled executable within the newly generated dist/ directory.
+
+📄 License
+This project operates under the MIT License.
 ```bash
 pip install opencv-python Pillow
