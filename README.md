@@ -4,7 +4,7 @@
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-A Python-based, hardware-integrated GUI application captures high-resolution, raw images of handwritten ledger documents and carbon copies. The system builds datasets for Machine Learning (OCR/HTR) models and maintains secure, legally compliant digital audit trails. [cite_start]Capturing and storing raw images correctly ensures the integrity of the dataset for training Machine Learning models and maintaining legal audit trails[cite: 149].
+A Python-based, hardware-integrated GUI application captures high-resolution, raw images of handwritten ledger documents and carbon copies. The system builds datasets for Machine Learning (OCR/HTR) models and maintains secure, legally compliant digital audit trails. Capturing and storing raw images correctly ensures the integrity of the dataset for training Machine Learning models and maintaining legal audit trails[cite: 149].
 
 ---
 
@@ -34,11 +34,11 @@ A Python-based, hardware-integrated GUI application captures high-resolution, ra
 
 This system strictly enforces data immutability and machine learning data collection standards:
 
-* [cite_start]**File Format Selection:** The application utilizes lossless image formats to preserve the integrity of faint handwritten strokes and carbon-copy artifacts[cite: 151]. [cite_start]PNG acts as the industry standard for raw document capture in machine learning pipelines[cite: 152]. [cite_start]The system completely avoids JPEG formats, as lossy compression introduces visual artifacts that degrade Handwritten Text Recognition (HTR) accuracy[cite: 153].
-* [cite_start]**Resolution and Quality Preservation:** The system saves images at the native resolution of the capture device[cite: 155]. [cite_start]It maintains a minimum of 300 DPI to guarantee sufficient pixel density[cite: 156].
-* [cite_start]**Systematic Naming Conventions:** The application implements a rigorous, programmatic naming schema to prevent data loss and ensure exact traceability back to the physical ledger[cite: 161]. 
-* [cite_start]**Metadata Association:** The script stores corresponding capture metadata alongside every raw image file[cite: 164, 165].
-* [cite_start]**Data Immutability:** The system isolates raw images in a dedicated, read-only directory[cite: 169]. 
+* **File Format Selection:** The application utilizes lossless image formats to preserve the integrity of faint handwritten strokes and carbon-copy artifacts[cite: 151]. PNG acts as the industry standard for raw document capture in machine learning pipelines[cite: 152]. The system completely avoids JPEG formats, as lossy compression introduces visual artifacts that degrade Handwritten Text Recognition (HTR) accuracy[cite: 153].
+* **Resolution and Quality Preservation:** The system saves images at the native resolution of the capture device[cite: 155]. It maintains a minimum of 300 DPI to guarantee sufficient pixel density[cite: 156].
+* **Systematic Naming Conventions:** The application implements a rigorous, programmatic naming schema to prevent data loss and ensure exact traceability back to the physical ledger[cite: 161]. 
+* **Metadata Association:** The script stores corresponding capture metadata alongside every raw image file[cite: 164, 165].
+* **Data Immutability:** The system isolates raw images in a dedicated, read-only directory[cite: 169]. 
 
 ---
 
